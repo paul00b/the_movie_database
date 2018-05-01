@@ -1,0 +1,19 @@
+<h1>Movie Database</h1>
+<p></p>
+<table>
+  <thead> <tr>
+           <th>Title</th>
+           <th>Director</th>
+           <th>Release year</th>
+       </tr></thead>
+  <tbody>
+<% @movies.each do |movie| %>
+
+    <tr>
+        <td><%= movie.title %> &nbsp&nbsp&nbsp&nbsp</td>
+        <td><%= movie.director.last_name %>&nbsp<%= movie.director.first_name %>&nbsp&nbsp&nbsp&nbsp</td>
+        <td><%= movie.release_year %> &nbsp </td>
+    </tr>
+<% end %>
+</tbody>
+</table>
